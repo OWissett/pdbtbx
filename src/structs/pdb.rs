@@ -131,7 +131,7 @@ impl PDB {
         // As the text can only contain ASCII len() on strings is fine (it returns the length in bytes)
         let res = if remark_text.len() > 70 {
             Err(PDBError::new(
-                crate::ErrorLevel::GeneralWarning,
+                crate::ErrorLevel::LooseWarning,
                 "Remark text too long",
                 format!("The given remark text is too long, the maximal length is 68 characters, the given string is {} characters.", remark_text.len()),
                 context))

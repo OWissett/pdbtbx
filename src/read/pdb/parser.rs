@@ -550,7 +550,7 @@ fn merge_long_remark_warnings(errors: &mut Vec<PDBError>) {
     if !contexts.is_empty() {
         // Generate the final error message
         errors.push(PDBError::new(
-            ErrorLevel::GeneralWarning,
+            ErrorLevel::LooseWarning,
             "Remark too long",
             "The above REMARK definitions are too long, the max is 80 characters.",
             Context::Multiple { contexts },
